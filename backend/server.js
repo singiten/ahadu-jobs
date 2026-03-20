@@ -32,7 +32,7 @@ app.use('/api/categories', categoryRoutes);
 app.use('/api/admin', adminRoutes);~
 app.use('/api/saved-jobs', savedJobsRoutes);
 const corsOptions = {
-  origin: ['https://ahadu-jobs.vercel.app', 'http://localhost:3000'],
+  origin: ['https://ahadu-job.vercel.app', 'http://localhost:3000'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
