@@ -1,0 +1,248 @@
+.saved-jobs-page {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+/* Header */
+.saved-jobs-header {
+  margin-bottom: 2rem;
+}
+
+.saved-jobs-header h1 {
+  color: #333;
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+}
+
+.saved-jobs-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.empty-icon {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.empty-state h2 {
+  color: #333;
+  margin: 0 0 0.5rem;
+}
+
+.empty-state p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.browse-jobs-btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: #078930;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.browse-jobs-btn:hover {
+  background: #DA121A;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(7, 137, 48, 0.3);
+}
+
+/* Saved Jobs Grid */
+.saved-jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.saved-job-card {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.saved-job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(218, 18, 26, 0.1);
+  border-color: #DA121A;
+}
+
+/* Card Header */
+.job-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.job-card-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.2rem;
+  flex: 1;
+  line-height: 1.4;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #999;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.remove-btn:hover {
+  color: #DA121A;
+  background: #fee;
+}
+
+/* Company Info */
+.company-info h4 {
+  margin: 0;
+  color: #666;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Location */
+.job-location {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.remote-badge {
+  background: #e0e0e0;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  color: #333;
+}
+
+/* Salary */
+.job-salary {
+  color: #DA121A;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Meta Info */
+.job-meta {
+  display: flex;
+  gap: 1rem;
+  color: #999;
+  font-size: 0.85rem;
+  margin: 0.25rem 0;
+}
+
+.job-type {
+  background: #078930;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.75rem;
+}
+
+/* Actions */
+.job-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.view-job-btn {
+  flex: 1;
+  padding: 0.5rem;
+  background: none;
+  color: #078930;
+  border: 2px solid #078930;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.view-job-btn:hover {
+  background: #078930;
+  color: white;
+}
+
+.apply-now-btn {
+  flex: 1;
+  padding: 0.5rem;
+  background: #DA121A;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.apply-now-btn:hover {
+  background: #078930;
+  transform: translateY(-2px);
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  padding: 4rem;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .saved-jobs-page {
+    padding: 1rem;
+  }
+
+  .saved-jobs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .job-actions {
+    flex-direction: column;
+  }
+
+  .job-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .remove-btn {
+    align-self: flex-end;
+  }
+}
