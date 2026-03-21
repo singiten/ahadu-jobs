@@ -64,7 +64,10 @@ const Register = () => {
       localStorage.setItem('user', JSON.stringify(response.data.user));
       
       toast.success('Registration successful!');
-      navigate('/dashboard');
+      
+      // ✅ AUTO-REDIRECT TO HOME PAGE (not dashboard)
+      navigate('/');
+      
     } catch (error) {
       toast.error(error.response?.data?.error || 'Registration failed');
     } finally {
@@ -76,8 +79,8 @@ const Register = () => {
     <div className="register-container">
       <div className="register-card">
         <div className="register-header">
-          <h2>ኩራዝ ሥራ</h2>
-          <p>Kuraz Jobs</p>
+          <h2>አሐዱ ሥራ</h2>
+          <p>Ahadu Jobs</p>
           <h3>Create an Account</h3>
         </div>
 

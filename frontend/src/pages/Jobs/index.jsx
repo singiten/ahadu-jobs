@@ -139,26 +139,28 @@ const Jobs = () => {
       </div>
 
       {/* Search Bar */}
-      <form onSubmit={handleSearch} className="search-bar">
-        <div className="search-input-wrapper">
-          <input
-            type="text"
-            name="search"
-            value={filters.search}
-            onChange={handleFilterChange}
-            placeholder="Job title, keywords, or company"
-            className="search-input"
-          />
-          <button type="submit" className="search-btn">Search</button>
-        </div>
-        <button 
-          type="button" 
-          className="filter-toggle"
-          onClick={() => setShowFilters(!showFilters)}
-        >
-          {showFilters ? 'Hide Filters ▲' : 'Show Filters ▼'}
-        </button>
-      </form>
+      {/* Search Bar */}
+<form onSubmit={handleSearch} className="search-bar">
+  <div className="search-input-wrapper">
+    <input
+      type="text"
+      name="search"
+      value={filters.search}
+      onChange={handleFilterChange}
+      placeholder="Job title, keywords, or company"
+      className="search-input"
+    />
+    <input
+      type="text"
+      name="location"
+      value={filters.location}
+      onChange={handleFilterChange}
+      placeholder="Location"
+      className="search-input"
+    />
+  </div>
+  <button type="submit" className="search-btn">Search Jobs</button>
+</form>
 
       {/* Filters Section */}
       {showFilters && (

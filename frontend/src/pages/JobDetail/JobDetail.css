@@ -4,12 +4,12 @@
   padding: 0 2rem;
 }
 
-/* Job Header */
+/* Job Header - Professional Blue Gradient */
 .job-header {
-  background: linear-gradient(135deg, #078930 0%, #FCDD09 50%, #DA121A 100%);
+  background: linear-gradient(135deg, #0B1120 0%, #1E3A8A 100%);
   color: white;
   padding: 2rem;
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
   margin-bottom: 2rem;
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
@@ -39,6 +39,7 @@
 .job-title-section h1 {
   margin: 0;
   font-size: 2rem;
+  color: white;
 }
 
 .job-actions {
@@ -60,7 +61,7 @@
 
 .save-btn:hover {
   background: white;
-  color: #078930;
+  color: var(--primary);
 }
 
 .save-btn.saved {
@@ -134,25 +135,27 @@
   gap: 2rem;
 }
 
-/* Main Content Sections */
+/* Main Content Sections - Professional Blue Theme */
 .job-section {
   background: white;
   padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   margin-bottom: 2rem;
+  border: 1px solid var(--gray-200);
 }
 
 .job-section h2 {
-  color: #333;
+  color: var(--primary);
   margin: 0 0 1.5rem;
   font-size: 1.3rem;
-  border-bottom: 2px solid #078930;
+  border-bottom: 2px solid var(--primary);
   padding-bottom: 0.5rem;
+  display: inline-block;
 }
 
 .job-description {
-  color: #666;
+  color: var(--gray-700);
   line-height: 1.8;
   margin: 0;
   white-space: pre-line;
@@ -169,14 +172,14 @@
 .responsibilities-list li {
   padding: 0.5rem 0 0.5rem 1.5rem;
   position: relative;
-  color: #555;
+  color: var(--gray-600);
   line-height: 1.6;
 }
 
 .requirements-list li::before,
 .responsibilities-list li::before {
   content: '•';
-  color: #DA121A;
+  color: var(--primary);
   font-weight: bold;
   position: absolute;
   left: 0;
@@ -187,34 +190,35 @@
 .overview-card {
   background: white;
   padding: 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   margin-bottom: 1.5rem;
+  border: 1px solid var(--gray-200);
 }
 
 .company-card h3,
 .overview-card h3 {
-  color: #333;
+  color: var(--primary);
   margin: 0 0 1rem;
   font-size: 1.1rem;
-  border-bottom: 2px solid #DA121A;
+  border-bottom: 2px solid var(--primary);
   padding-bottom: 0.5rem;
 }
 
 .company-card h4 {
-  color: #078930;
+  color: var(--primary-dark);
   margin: 0 0 0.5rem;
   font-size: 1.2rem;
 }
 
 .company-card p {
-  color: #666;
+  color: var(--gray-600);
   line-height: 1.6;
   margin: 0 0 1rem;
 }
 
 .company-website {
-  color: #078930;
+  color: var(--primary);
   text-decoration: none;
   font-weight: 600;
   display: inline-block;
@@ -228,7 +232,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0.75rem 0;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--gray-200);
 }
 
 .overview-item:last-child {
@@ -236,12 +240,12 @@
 }
 
 .overview-item .label {
-  color: #666;
+  color: var(--gray-500);
   font-weight: 500;
 }
 
 .overview-item .value {
-  color: #333;
+  color: var(--gray-700);
   font-weight: 600;
 }
 
@@ -251,7 +255,7 @@
 
 .tags-section .label {
   display: block;
-  color: #666;
+  color: var(--gray-500);
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
@@ -263,11 +267,17 @@
 }
 
 .tag {
-  background: #f0f0f0;
-  color: #666;
+  background: var(--gray-100);
+  color: var(--gray-600);
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.85rem;
+  transition: all 0.3s;
+}
+
+.tag:hover {
+  background: var(--primary);
+  color: white;
 }
 
 /* Apply Modal */
@@ -288,12 +298,13 @@
 .modal-content {
   background: white;
   padding: 2rem;
-  border-radius: 20px;
+  border-radius: var(--radius);
   width: 100%;
   max-width: 600px;
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
+  border-top: 4px solid var(--primary);
 }
 
 .modal-close {
@@ -304,15 +315,15 @@
   border: none;
   font-size: 2rem;
   cursor: pointer;
-  color: #999;
+  color: var(--gray-400);
 }
 
 .modal-close:hover {
-  color: #333;
+  color: var(--primary);
 }
 
 .modal-content h2 {
-  color: #333;
+  color: var(--primary);
   margin: 0 0 1.5rem;
   padding-right: 2rem;
 }
@@ -325,35 +336,36 @@
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: var(--gray-700);
   font-weight: 500;
 }
 
 .form-group textarea {
   width: 100%;
   padding: 0.75rem;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius);
   font-size: 1rem;
   resize: vertical;
+  transition: border-color 0.3s;
 }
 
 .form-group textarea:focus {
   outline: none;
-  border-color: #078930;
+  border-color: var(--primary);
 }
 
 .form-group input[type="file"] {
   width: 100%;
   padding: 0.5rem;
-  border: 2px dashed #e0e0e0;
-  border-radius: 8px;
-  background: #f9f9f9;
+  border: 2px dashed var(--gray-300);
+  border-radius: var(--radius);
+  background: var(--gray-50);
 }
 
 .help-text {
   margin: 0.25rem 0 0;
-  color: #999;
+  color: var(--gray-400);
   font-size: 0.85rem;
 }
 
@@ -367,23 +379,23 @@
 .cancel-btn {
   padding: 0.75rem 1.5rem;
   background: none;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
+  border: 2px solid var(--gray-300);
+  border-radius: var(--radius);
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s;
 }
 
 .cancel-btn:hover {
-  background: #e0e0e0;
+  background: var(--gray-100);
 }
 
 .submit-btn {
   padding: 0.75rem 1.5rem;
-  background: #DA121A;
+  background: var(--primary);
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: var(--radius);
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -391,7 +403,7 @@
 }
 
 .submit-btn:hover:not(:disabled) {
-  background: #078930;
+  background: var(--primary-dark);
   transform: translateY(-2px);
 }
 
@@ -405,7 +417,7 @@
 .error {
   text-align: center;
   padding: 4rem;
-  color: #666;
+  color: var(--gray-500);
   font-size: 1.2rem;
 }
 
@@ -449,5 +461,10 @@
   .cancel-btn,
   .submit-btn {
     width: 100%;
+  }
+
+  .job-meta-header {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }

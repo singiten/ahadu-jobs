@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-grid">
           {/* Brand Section */}
           <div className="footer-section">
-            <h3>Kuraz Jobs</h3>
+            <h3>Ahadu Jobs</h3>
             <p className="footer-tagline">Connecting Ethiopia's talent with opportunity</p>
             <p className="footer-description">
               Find your dream job or hire the best talent in Ethiopia. 
@@ -70,7 +70,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2026 Kuraz Jobs. All rights reserved.</p>
+          <p>&copy; 2026 Ahadu Jobs. All rights reserved.</p>
           <div className="footer-legal">
             <Link to="/privacy">Privacy Policy</Link>
             <Link to="/terms">Terms of Service</Link>
